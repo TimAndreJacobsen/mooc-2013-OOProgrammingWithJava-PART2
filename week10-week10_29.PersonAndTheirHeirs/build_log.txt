@@ -1,0 +1,108 @@
+
+-pre-init:
+
+-init-private:
+
+-init-user:
+
+-init-project:
+
+-init-macrodef-property:
+
+-do-init:
+
+-post-init:
+
+-init-check:
+
+-init-ap-cmdline-properties:
+
+-init-macrodef-javac-with-processors:
+
+-init-macrodef-javac-without-processors:
+
+-init-macrodef-javac:
+
+-init-macrodef-junit:
+
+-init-debug-args:
+
+-init-macrodef-nbjpda:
+
+-init-macrodef-debug:
+
+-init-macrodef-java:
+
+-init-presetdef-jar:
+
+-init-ap-cmdline-supported:
+
+-init-ap-cmdline:
+
+init:
+
+-deps-jar-init:
+   [delete] Deleting: D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\build\built-jar.properties
+
+deps-jar:
+
+-warn-already-built-jar:
+[propertyfile] Updating property file: D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\build\built-jar.properties
+
+-check-automatic-build:
+
+-clean-after-automatic-build:
+
+-verify-automatic-build:
+
+-pre-pre-compile:
+
+-pre-compile:
+
+-copy-persistence-xml:
+
+-compile-depend:
+
+-do-compile:
+    [javac] Compiling 3 source files to D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\build\classes
+    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\Main.java:19: error: cannot find symbol
+    [javac]     public static void printDepartment(List<Person> people) {
+    [javac]                                             ^
+    [javac]   symbol:   class Person
+    [javac]   location: class Main
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\people\Student.java:3: error: cannot find symbol
+    [javac] public class Student extends Person {
+    [javac]                              ^
+    [javac]   symbol: class Person
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\people\Teacher.java:3: error: cannot find symbol
+    [javac] public class Teacher extends Person {
+    [javac]                              ^
+    [javac]   symbol: class Person
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\Main.java:10: error: cannot find symbol
+    [javac]         List<Person> people = new ArrayList<Person>();
+    [javac]              ^
+    [javac]   symbol:   class Person
+    [javac]   location: class Main
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\Main.java:10: error: cannot find symbol
+    [javac]         List<Person> people = new ArrayList<Person>();
+    [javac]                                             ^
+    [javac]   symbol:   class Person
+    [javac]   location: class Main
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\Main.java:21: error: cannot find symbol
+    [javac]         for (Person person : people) {
+    [javac]              ^
+    [javac]   symbol:   class Person
+    [javac]   location: class Main
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\people\Student.java:23: error: cannot find symbol
+    [javac]         return super.toString() + "\n  credits " + this.credits;
+    [javac]                ^
+    [javac]   symbol:   variable super
+    [javac]   location: class Student
+    [javac] D:\TMC for IntelliJ\TMCProjects\mooc-2013-OOProgrammingWithJava-PART2\week10-week10_29.PersonAndTheirHeirs\src\people\Teacher.java:13: error: cannot find symbol
+    [javac]         return super.toString() + "\n  salary " + this.salary + " euros/month";
+    [javac]                ^
+    [javac]   symbol:   variable super
+    [javac]   location: class Teacher
+    [javac] 8 errors
+    [javac] 1 warning
