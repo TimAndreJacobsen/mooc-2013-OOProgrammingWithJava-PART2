@@ -23,23 +23,26 @@ public class Worm {
         this.body = new ArrayList<Piece>();
         this.body.add(new Piece(x,y));
         this.grow = false;
+        // could add head if it useful for tracking
     }
 
-    // Getters and Setters
+    // Getters
     public Direction getDirection() {
         return this.direction;
+    }
+    public int getLength() {
+        return this.body.size();
+    }
+    public List<Piece> getPieces() {
+        return this.body;
     }
 
     public void setDirection(Direction direction) {
         this.direction = direction;
     }
 
-    public int getLength() {
-        return this.body.size();
-    }
-
-    public List<Piece> getPieces() {
-        return this.body;
+    public void grow() {
+        grow = true;
     }
 
     // Class Methods
@@ -69,9 +72,6 @@ public class Worm {
         }
     }
 
-    public void grow() {
-        grow = true;
-    }
 
     public boolean runsInto(Piece piece) {
 

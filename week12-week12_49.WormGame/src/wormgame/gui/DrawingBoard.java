@@ -15,7 +15,7 @@ public class DrawingBoard extends JPanel implements Updatable {
 
     public DrawingBoard(WormGame wormGame, int pieceLength) {
         this.wormGame = wormGame;
-        this.pieceLength = pieceLength; // Dimension of the pieces, length == height
+        this.pieceLength = pieceLength; // Size of either height / length
 
     }
 

@@ -21,6 +21,14 @@ public class UserInterface implements Runnable {
         this.sideLength = sideLength;
     }
 
+    // Getters
+    public Updatable getUpdatable() {
+        return this.drawingBoard;
+    }
+    public JFrame getFrame() {
+        return frame;
+    }
+
     @Override
     public void run() {
         frame = new JFrame("Worm Game");
@@ -44,14 +52,6 @@ public class UserInterface implements Runnable {
         container.add(drawingBoard);
 
         frame.addKeyListener(new KeyboardListener(this.game.getWorm()));
-
     }
 
-    public Updatable getUpdatable() {
-        return this.drawingBoard;
-    }
-
-    public JFrame getFrame() {
-        return frame;
-    }
 }

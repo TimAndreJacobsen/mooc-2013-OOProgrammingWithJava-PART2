@@ -10,10 +10,10 @@ public class Piece {
         this.y = y;
     }
 
+    // Getters
     public int getX() {
         return x;
     }
-
     public int getY() {
         return y;
     }

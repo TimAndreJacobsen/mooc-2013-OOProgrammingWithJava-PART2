@@ -3,6 +3,7 @@ package wormgame;
 import javax.swing.SwingUtilities;
 
 import wormgame.domain.Worm;
+import wormgame.gui.DrawingBoard;
 import wormgame.gui.UserInterface;
 import wormgame.game.WormGame;
 
@@ -14,9 +15,11 @@ public class Main {
         UserInterface ui = new UserInterface(game, 20);
         SwingUtilities.invokeLater(ui);
 
+        // game.start();
         while (ui.getUpdatable() == null) {
             try {
                 Thread.sleep(100);
+                // game.setUpdatable(ui.getUpdatable());
             } catch (InterruptedException ex) {
                 System.out.println("The drawing board hasn't been created yet.");
             }
