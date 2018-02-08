@@ -37,5 +37,5 @@ public class DrawingBoard extends JPanel implements Updatable {
     @Override
     public void update() {
         super.repaint();
-    }
+            }
 }

@@ -84,18 +84,25 @@ public class WormGame extends Timer implements ActionListener {
         if (!continues) {
             return;
         }
-
         worm.move();
 
         if (worm.runsInto(apple)) {
             worm.grow();
             spawnApple();
+
+            // fail conditions
         } else if (worm.runsIntoItself()) {
             continues = false;
-        } else if (worm.getPieces().get(worm.getLength()).getX() == this.width || worm.getPieces().get(worm.getLength()).getX() < 0) {
+            // TODO index out of bounds error: [2]
+        } else if (worm.getHeadX() == this.width || worm.getHeadY() == this.height) { // changed 8.2.18
             continues = false;
-        } else if (worm.getPieces().get(worm.getLength()).getY() == this.height || worm.getPieces().get(worm.getLength()).getY() < 0) {
+
+        } else if (worm.getHeadX() == 0 || worm.getHeadY() == 0) { // adding for min values aswell
+            // } else if (worm.getPieces().get(worm.getLength()).getX() == this.width || worm.getPieces().get(worm.getLength()).getX() < 0) {
             continues = false;
+
+        //} else if (worm.getPieces().get(worm.getLength()).getY() == this.height || worm.getPieces().get(worm.getLength()).getY() < 0) {
+           // continues = false;
 
         }
         updatable.update();

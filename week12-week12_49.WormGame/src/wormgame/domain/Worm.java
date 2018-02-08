@@ -67,7 +67,7 @@ public class Worm {
         if (this.getLength() > 3 && grow == false) {
             body.remove(0);
         }
-        if (grow == true) {
+        if (grow) {
             grow = false;
         }
     }
@@ -85,7 +85,8 @@ public class Worm {
 
     public boolean runsIntoItself() {
         for (int i = 0; i < getLength()-1; i++) {
-            if (body.get(body.size()-1).getX() == body.get(i).getX() && body.get(body.size()-1).getY() == body.get(i).getY()) {
+            if (body.get(body.size()-1).getX() == body.get(i).getX()
+                    && body.get(body.size()-1).getY() == body.get(i).getY()) {
                 return true;
             }
         }
@@ -93,4 +94,12 @@ public class Worm {
     }
 
 
+    public int getHeadX() {
+        Piece headPiece = body.get(0);
+        return headPiece.getX();
+    }
+    public int getHeadY() {
+        Piece headPiece = body.get(0);
+        return headPiece.getY();
+    }
 }
