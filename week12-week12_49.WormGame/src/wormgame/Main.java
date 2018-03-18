@@ -1,9 +1,8 @@
 package wormgame;
 
 import javax.swing.SwingUtilities;
-
+import wormgame.domain.Piece;
 import wormgame.domain.Worm;
-import wormgame.gui.DrawingBoard;
 import wormgame.gui.UserInterface;
 import wormgame.game.WormGame;
 
@@ -11,6 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         WormGame game = new WormGame(20, 20);
+
         UserInterface ui = new UserInterface(game, 20);
         SwingUtilities.invokeLater(ui);
 
@@ -24,9 +24,5 @@ public class Main {
 
         game.setUpdatable(ui.getUpdatable());
         game.start();
-
-        //ui.run();
-        //game.start();
-
     }
 }
